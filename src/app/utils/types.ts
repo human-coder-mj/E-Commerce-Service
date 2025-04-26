@@ -12,6 +12,6 @@ export interface UserInterface extends Document {
     role: string;
     resetPasswordToken?: string;
     resetPasswordExpires?: Date;
-    updated?: Date;
-    created: Date;
+    createdAt?: Date;
+    updatedAt?: Date;
   }

@@ -45,14 +45,11 @@ const UserSchema: Schema<UserInterface> = new Schema<UserInterface>({
   resetPasswordExpires: {
     type: Date
   },
-  updated: {
-    type: Date
-  },
-  created: {
-    type: Date,
-    default: Date.now
-  }
-});
+},
+{
+  timestamps:true // Mongoose automatically adds createdAt and updatedAt
+}
+);
 
 const UserModel = mongoose.model<UserInterface>('User', UserSchema);
 export default UserModel;
