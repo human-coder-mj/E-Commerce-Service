@@ -30,5 +30,28 @@ export const ORDER_STATUS = {
     Returned: 'RETURNED'
 } as const;
 
+export const REPORT_TYPE = {
+    OrderIssue: 'ORDER_ISSUE',
+    ProductDefect: 'PRODUCT_DEFECT',
+    DeliveryProblem: 'DELIVERY_PROBLEM',
+    PaymentIssue: 'PAYMENT_ISSUE',
+    CustomerService: 'CUSTOMER_SERVICE',
+    Other: 'OTHER'
+} as const;
+
+export const REPORT_STATUS = {
+    Open: 'OPEN',
+    InProgress: 'IN_PROGRESS',
+    Resolved: 'RESOLVED',
+    Closed: 'CLOSED'
+} as const;
+
+export const REPORT_PRIORITY = {
+    Low: 'LOW',
+    Medium: 'MEDIUM',
+    High: 'HIGH',
+    Critical: 'CRITICAL'
+} as const;
+
 
 //as const ->freezes the object and makes each property a literal type, not just a general string.

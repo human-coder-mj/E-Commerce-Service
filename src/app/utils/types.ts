@@ -59,3 +59,16 @@ export interface CategoryInterface extends Document {
     updatedAt?: Date;
     isActive(): boolean;
 }
+
+export interface ReportInterface extends Document {
+    orderId: mongoose.Types.ObjectId;
+    userId: mongoose.Types.ObjectId;
+    content: string;
+    reportType: string;
+    status: string;
+    priority: string;
+    adminResponse?: string;
+    resolvedAt?: Date;
+    createdAt?: Date;
+    updatedAt?: Date;
+}
