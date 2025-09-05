@@ -57,4 +57,5 @@ export interface CategoryInterface extends Document {
     status: boolean;
     createdAt?: Date;
     updatedAt?: Date;
+    isActive(): boolean;
 }

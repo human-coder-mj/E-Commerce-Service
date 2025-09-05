@@ -44,5 +44,5 @@ CategorySchema.statics.findActive = function() {
     return this.find({ status: true }).sort({ name: 1 });
 };
 
-const CategoryModel = mongoose.model<CategoryInterface>('Category', CategorySchema);
-export default CategoryModel;
+const Category = mongoose.model<CategoryInterface>('Category', CategorySchema);
+export default Category;
