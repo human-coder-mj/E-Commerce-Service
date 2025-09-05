@@ -21,5 +21,21 @@ export const PRODUCT_STATUS = {
     Inactive: false
 } as const;
 
+export const ORDER_STATUS = {
+    Pending: 'PENDING',
+    Processing: 'PROCESSING',
+    Shipped: 'SHIPPED',
+    Delivered: 'DELIVERED',
+    Cancelled: 'CANCELLED',
+    Returned: 'RETURNED'
+} as const;
+
+export const PAYMENT_STATUS = {
+    Pending: 'PENDING',
+    Paid: 'PAID',
+    Failed: 'FAILED',
+    Refunded: 'REFUNDED'
+} as const;
+
 
 //as const ->freezes the object and makes each property a literal type, not just a general string.

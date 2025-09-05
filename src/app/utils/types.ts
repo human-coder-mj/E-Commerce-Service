@@ -30,3 +30,23 @@ export interface ProductInterface extends Document {
     createdAt?: Date;
     updatedAt?: Date;
 }
+
+export interface OrderItem {
+    product: mongoose.Types.ObjectId;
+    quantity: number;
+    price: number;
+    size?: string;
+}
+
+export interface OrderInterface extends Document {
+    products: OrderItem[];
+    buyer: mongoose.Types.ObjectId;
+    address: string;
+    orderStatus: string;
+    orderDate: Date;
+    deliveryDate?: Date;
+    trackingNumber?: string;
+    notes?: string;
+    createdAt?: Date;
+    updatedAt?: Date;
+}
