@@ -71,4 +71,7 @@ export interface ReportInterface extends Document {
     resolvedAt?: Date;
     createdAt?: Date;
     updatedAt?: Date;
+    isResolved(): boolean;
+    canBeModified(): boolean;
+    resolve(adminResponse?: string): Promise<ReportInterface>;
 }
