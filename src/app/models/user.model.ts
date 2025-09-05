@@ -39,6 +39,10 @@ const UserSchema: Schema<UserInterface> = new Schema<UserInterface>({
     default: ROLES.Member,
     enum: [ROLES.Admin, ROLES.Member, ROLES.Merchant]
   },
+  favorites: [{
+    type: Schema.Types.ObjectId,
+    ref: 'Product'
+  }],
   resetPasswordToken: {
     type: String
   },
@@ -50,6 +54,10 @@ const UserSchema: Schema<UserInterface> = new Schema<UserInterface>({
   timestamps:true // Mongoose automatically adds createdAt and updatedAt
 }
 );
+
+UserSchema.index({ email: 1 });
+UserSchema.index({ phoneNumber: 1 });
+UserSchema.index({ googleId: 1 });
 
 const UserModel = mongoose.model<UserInterface>('User', UserSchema);
 export default UserModel;

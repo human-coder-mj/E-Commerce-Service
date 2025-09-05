@@ -10,6 +10,7 @@ export interface UserInterface extends Document {
     provider: string;
     googleId?: string;
     role: string;
+    favorites?: mongoose.Types.ObjectId[];
     resetPasswordToken?: string;
     resetPasswordExpires?: Date;
     createdAt?: Date;
