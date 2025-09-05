@@ -30,12 +30,5 @@ export const ORDER_STATUS = {
     Returned: 'RETURNED'
 } as const;
 
-export const PAYMENT_STATUS = {
-    Pending: 'PENDING',
-    Paid: 'PAID',
-    Failed: 'FAILED',
-    Refunded: 'REFUNDED'
-} as const;
-
 
 //as const ->freezes the object and makes each property a literal type, not just a general string.
