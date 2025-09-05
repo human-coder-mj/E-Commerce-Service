@@ -10,5 +10,16 @@ export const EMAIL_PROVIDER = {
     Facebook: 'Facebook'
 } as const;
 
+export const GENDER = {
+    Male: 'Male',
+    Female: 'Female',
+    Unisex: 'Unisex'
+} as const;
+
+export const PRODUCT_STATUS = {
+    Active: true,
+    Inactive: false
+} as const;
+
 
 //as const ->freezes the object and makes each property a literal type, not just a general string.

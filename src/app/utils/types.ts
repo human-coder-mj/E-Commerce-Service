@@ -16,3 +16,17 @@ export interface UserInterface extends Document {
     createdAt?: Date;
     updatedAt?: Date;
   }
+
+export interface ProductInterface extends Document {
+    imageUrl: string;
+    name: string;
+    color: string;
+    sizes: string[];
+    description: string;
+    category?: mongoose.Types.ObjectId;
+    gender: string;
+    price: number;
+    status: boolean;
+    createdAt?: Date;
+    updatedAt?: Date;
+}
