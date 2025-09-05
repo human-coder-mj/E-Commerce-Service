@@ -50,3 +50,11 @@ export interface OrderInterface extends Document {
     createdAt?: Date;
     updatedAt?: Date;
 }
+
+export interface CategoryInterface extends Document {
+    name: string;
+    genre?: mongoose.Types.ObjectId;
+    status: boolean;
+    createdAt?: Date;
+    updatedAt?: Date;
+}
